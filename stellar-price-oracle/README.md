@@ -52,34 +52,34 @@ chmod +x deploy-setup.sh
 **Manual quick start:**  
 See below or use the script above for a smoother experience.
 
-## 🎯 What You Get
+## 🛠️ Git Pull: Handling Divergent Branches
 
-- ✅ **Real DexScreener API data** (BTC, ETH, SOL, XLM, WBTC, WETH, WSOL, etc.)
-- ✅ **Soroban contract** (stores prices on-chain)
-- ✅ **Beautiful React dashboard** (animated price cards, live charts)
-- ✅ **Manual data submission** (perfect for demos)
-- ✅ **One-click deployment**
-
-## 🏗️ Architecture
+If you see a message like:
 
 ```
-DexScreener API → Oracle Service → Soroban Contract → React Frontend
-     ↓                ↓               ↓                ↓
-  BTC: $67K      → Format data   → Store on-chain   → Live charts
+fatal: Need to specify how to reconcile divergent branches.
 ```
 
-## 📁 Project Structure
+You need to tell Git how to handle divergent branches. Use one of the following commands:
 
-```
-stellar-price-oracle/
-├── 📋 README.md
-├── 🚀 quick-deploy.sh         # One-click deployment
-├── ⚙️ .env.example
-│
-├── 🦀 contract/               # Simple Soroban Contract
-│   ├── Cargo.toml
-│   └── src/
-│       └── lib.rs            # Minimal price oracle contract
+- To always merge (default merge commit):
+  ```bash
+  git config pull.rebase false
+  ```
+
+- To always rebase:
+  ```bash
+  git config pull.rebase true
+  ```
+
+- To only allow fast-forward merges:
+  ```bash
+  git config pull.ff only
+  ```
+
+You can also specify your choice just for the current pull:
+
+```bash
 │
 ├── 🌐 oracle-service/         # Node.js Price Fetcher
 │   ├── package.json
