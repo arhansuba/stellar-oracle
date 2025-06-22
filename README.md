@@ -1,7 +1,7 @@
 
 # 🚀 StellarPrice Oracle - Real-time Crypto Oracle on Stellar
 
-##Demo Video
+## Demo Video
 
 https://drive.google.com/file/d/1dhQchLIvAp9XcbpCoD8ROnsYxg-0AewQ/view?usp=sharing
 
