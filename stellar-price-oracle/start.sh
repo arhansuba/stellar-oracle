@@ -12,7 +12,7 @@ sleep 2
 # Start backend
 echo "🌐 Starting Backend..."
 cd oracle-service
-export ORACLE_CONTRACT_ID=CCSEZNQLDRP5FJGQTSHKQRCPPXKWDO3TB72OSE4U7IOCNRLE65HTNQ63
+export ORACLE_CONTRACT_ID=CAR27TD3JZTPGJGOZ6EQOFG4YS5T6MU2WBWMM6KXR3NQFXGUTSQFP3WG
 export PROVIDER_SECRET=SBLNHW4PBCYUZBZ6SFFOVJ6ORBQR5T3FYFCBFO2DSZVXXLVLZMQDSLLX
 STELLAR_RPC_URL=https://soroban-testnet.stellar.org:443 npm start > ../backend.log 2>&1 &
 BACKEND_PID=$!
@@ -60,7 +60,7 @@ echo ""
 echo "🌐 Frontend:    http://localhost:3000"
 echo "📊 Backend API: http://localhost:3001/health"
 echo "💰 Live Prices: http://localhost:3001/prices"
-echo "📋 Contract:    CCSEZNQLDRP5FJGQTSHKQRCPPXKWDO3TB72OSE4U7IOCNRLE65HTNQ63"
+echo "📋 Contract:    CAR27TD3JZTPGJGOZ6EQOFG4YS5T6MU2WBWMM6KXR3NQFXGUTSQFP3WG"
 echo ""
 echo "📋 Process IDs:"
 echo "   Backend:  $BACKEND_PID"

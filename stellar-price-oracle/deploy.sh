@@ -37,31 +37,16 @@ cd contract
 cargo build --target wasm32-unknown-unknown --release
 cd ..
 
-# Deploy contract
+# Deploy contract with alias
 echo "🚀 Deploying contract to Stellar..."
-CONTRACT_ID=$(stellar contract deploy \
-  --wasm contract/target/wasm32-unknown-unknown/release/price_oracle.wasm \
+stellar contract deploy \
+  --wasm contract/target/wasm32-unknown-unknown/release/stellar_price_oracle.wasm \
   --source deployer \
-  --network testnet)
+  --network testnet \
+  --alias price_oracle
 
+CONTRACT_ID=$(stellar contract id --alias price_oracle --network testnet)
 echo "✅ Contract deployed: $CONTRACT_ID"
-
-# Initialize contract
-echo "🔧 Initializing contract..."
-stellar contract invoke \
-  --id $CONTRACT_ID \
-  --source deployer \
-  --network testnet \
-  -- initialize \
-  --admin $(stellar keys address deployer)
-
-# Test contract
-echo "🧪 Testing contract..."
-stellar contract invoke \
-  --id $CONTRACT_ID \
-  --source deployer \
-  --network testnet \
-  -- get_assets
 
 # Create .env with everything
 echo "⚙️ Creating .env..."
@@ -112,6 +97,27 @@ cd ..
 
 # Wait for frontend
 sleep 5
+
+# Example test call (set price)
+echo "🧪 Testing contract..."
+stellar contract invoke \
+  --id price_oracle \
+  --source deployer \
+  --network testnet \
+  -- \
+  set_price \
+  --pair BTC \
+  --price 123456 \
+  --provider $(stellar keys address deployer)
+
+# Example test call (get price)
+stellar contract invoke \
+  --id price_oracle \
+  --source deployer \
+  --network testnet \
+  -- \
+  get_price \
+  --pair BTC
 
 echo ""
 echo "🎉 EVERYTHING IS RUNNING!"

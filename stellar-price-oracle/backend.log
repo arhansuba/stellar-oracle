@@ -3,7 +3,7 @@
 > node index.js
 
 🚀 Stellar Oracle Pro initialized
-📋 Contract: CCSEZNQLDRP5FJGQTSHKQRCPPXKWDO3TB72OSE4U7IOCNRLE65HTNQ63
+📋 Contract: CAR27TD3JZTPGJGOZ6EQOFG4YS5T6MU2WBWMM6KXR3NQFXGUTSQFP3WG
 📍 Provider: Configured
 🔑 Provider Public Key: GC3B5PP5MBWBDKP3AWK6EUOZIWQ75O3BXMD5TUW3YQU5XKU2LISY2LSL
 🔄 Starting price update service...
@@ -13,106 +13,29 @@
 📊 Health: http://localhost:3001/health
 💰 Prices: http://localhost:3001/prices
 📈 Status: http://localhost:3001/status
-💰 BTC: $102261.240000 via token_address (orca)
-💰 ETH: $2261.890000 via token_address (orca)
-💰 SOL: $134.690000 via token_address (raydium)
+💰 BTC: $102453.730000 via token_address (orca)
+💰 ETH: $2280.680000 via token_address (orca)
+💰 SOL: $135.760000 via token_address (raydium)
 💰 XLM: $1.001200 via token_address (uniswap)
-🔎 TX result for XLM: {
-  "status": "ERROR",
-  "hash": "bbdc1129c03c96473a23c325621c529c93e8d5e6e105d8954006b86a3d98c78b",
-  "latestLedger": 59225,
-  "latestLedgerCloseTime": "1750563641",
-  "errorResult": {
-    "_attributes": {
-      "feeCharged": {
-        "_value": "0"
-      },
-      "result": {
-        "_switch": {
-          "name": "txMalformed",
-          "value": -16
-        }
-      },
-      "ext": {
-        "_switch": 0
-      }
-    }
-  }
-}
-🔎 TX result for ETH: {
-  "status": "ERROR",
-  "hash": "241b074261f789d0ac8a7d59a7428fcc1d5c20a6f9955b95e65f621091765367",
-  "latestLedger": 59225,
-  "latestLedgerCloseTime": "1750563641",
-  "errorResult": {
-    "_attributes": {
-      "feeCharged": {
-        "_value": "0"
-      },
-      "result": {
-        "_switch": {
-          "name": "txMalformed",
-          "value": -16
-        }
-      },
-      "ext": {
-        "_switch": 0
-      }
-    }
-  }
-}
-🔎 TX result for BTC: {
-  "status": "ERROR",
-  "hash": "c28aa04a92aabca078ce40f7df08210ad971ba129eb3393f6233c09385627fd7",
-  "latestLedger": 59225,
-  "latestLedgerCloseTime": "1750563641",
-  "errorResult": {
-    "_attributes": {
-      "feeCharged": {
-        "_value": "0"
-      },
-      "result": {
-        "_switch": {
-          "name": "txMalformed",
-          "value": -16
-        }
-      },
-      "ext": {
-        "_switch": 0
-      }
-    }
-  }
-}
-🔎 TX result for SOL: {
-  "status": "ERROR",
-  "hash": "c5df6881ddfd458863bd83d07de992b01d40f8d0a3a7f5332e128c5bd5b05cb6",
-  "latestLedger": 59225,
-  "latestLedgerCloseTime": "1750563641",
-  "errorResult": {
-    "_attributes": {
-      "feeCharged": {
-        "_value": "0"
-      },
-      "result": {
-        "_switch": {
-          "name": "txMalformed",
-          "value": -16
-        }
-      },
-      "ext": {
-        "_switch": 0
-      }
-    }
-  }
-}
-❌ Submission failed for BTC: null
-❌ Submission failed for ETH: null
-❌ Submission failed for SOL: null
-❌ Submission failed for XLM: null
-📊 Update #1 complete in 2506ms
-💰 Fetched 4 prices | ⛓️ Submitted 0 to Stellar
+🔄 Submitting BTC: $102453.73 via simple payment...
+📡 Testing transaction system with BTC...
+📡 GET /health from ::1
+✅ SYSTEM WORKS BTC: Transaction successful!
+📋 Next step: Fix contract call once system proven working
+🔄 Submitting ETH: $2280.68 via simple payment...
+📡 Testing transaction system with ETH...
+❌ SYSTEM ERROR ETH: TRY_AGAIN_LATER
+🔄 Submitting SOL: $135.76 via simple payment...
+📡 Testing transaction system with SOL...
+❌ SYSTEM ERROR SOL: ERROR
+🔄 Submitting XLM: $1.00 via simple payment...
+📡 Testing transaction system with XLM...
+✅ SYSTEM WORKS XLM: Transaction successful!
+📋 Next step: Fix contract call once system proven working
+📊 Update #1 complete in 8294ms
+💰 Fetched 4 prices | ⛓️ Submitted 2 to Stellar
+🎉 Successfully updated 2 price(s) on Stellar blockchain!
 ✅ Oracle service ready (30s updates)
 🎯 Perfect for hackathon demos!
-📡 GET /health from ::1
 
 👋 Stellar Oracle shutting down gracefully...
