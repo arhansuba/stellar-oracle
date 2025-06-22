@@ -1,6 +1,6 @@
 # 🚀 StellarPrice Oracle - Real-time Crypto Oracle on Stellar
 
-A hackathon-ready price oracle that fetches real crypto prices from Binance API and stores them on Stellar blockchain.
+A hackathon-ready price oracle that fetches real crypto prices from **DexScreener API** and stores them on the Stellar blockchain.
 
 ## ⚡ Quick Start (5 minutes)
 
@@ -27,7 +27,12 @@ chmod +x quick-deploy.sh
 ./quick-deploy.sh
 
 # 6. Edit .env with your Stellar secret key
-# 7. Visit http://localhost:3000 🎉
+
+# 7. Start the whole app (backend + frontend)
+chmod +x start.sh
+./start.sh
+
+# 8. Visit http://localhost:3000 🎉
 ```
 
 ## 🚀 Deployment & Setup
@@ -42,14 +47,15 @@ chmod +x deploy-setup.sh
 - This script checks prerequisites, builds/contracts, updates `.env`, installs dependencies, and provides one-click startup/test scripts:
   - `./start-oracle.sh` – Start both backend and frontend
   - `./test-oracle.sh` – Test API and frontend health
+  - `./start.sh` – Start the whole app (recommended)
 
 **Manual quick start:**  
 See below or use the script above for a smoother experience.
 
 ## 🎯 What You Get
 
-- ✅ **Real Binance API data** (BTC, ETH, XLM prices)
-- ✅ **30-line Soroban contract** (stores prices on-chain)
+- ✅ **Real DexScreener API data** (BTC, ETH, SOL, XLM, WBTC, WETH, WSOL, etc.)
+- ✅ **Soroban contract** (stores prices on-chain)
 - ✅ **Beautiful React dashboard** (animated price cards, live charts)
 - ✅ **Manual data submission** (perfect for demos)
 - ✅ **One-click deployment**
@@ -57,9 +63,9 @@ See below or use the script above for a smoother experience.
 ## 🏗️ Architecture
 
 ```
-Binance API → Oracle Service → Soroban Contract → React Frontend
-     ↓              ↓               ↓              ↓
-  BTC: $67K    → Format data   → Store on-chain → Live charts
+DexScreener API → Oracle Service → Soroban Contract → React Frontend
+     ↓                ↓               ↓                ↓
+  BTC: $67K      → Format data   → Store on-chain   → Live charts
 ```
 
 ## 📁 Project Structure
@@ -70,18 +76,17 @@ stellar-price-oracle/
 ├── 🚀 quick-deploy.sh         # One-click deployment
 ├── ⚙️ .env.example
 │
-├── 🦀 contract/               # Simple Soroban Contract (30 lines!)
+├── 🦀 contract/               # Simple Soroban Contract
 │   ├── Cargo.toml
 │   └── src/
 │       └── lib.rs            # Minimal price oracle contract
 │
-├── 🌐 oracle-service/         # Simple Node.js Price Fetcher
+├── 🌐 oracle-service/         # Node.js Price Fetcher
 │   ├── package.json
-│   ├── index.js              # Main oracle service (100 lines)
-│   ├── price-fetcher.js      # Fetch from free APIs
-│   └── stellar-client.js     # Submit to contract
+│   ├── index.js              # Main oracle service
+│   └── ...                   # Price fetcher, Stellar client
 │
-├── 🎨 frontend/               # React Dashboard (The Star!)
+├── 🎨 frontend/               # React Dashboard
 │   ├── package.json
 │   ├── vite.config.ts
 │   ├── tailwind.config.js
@@ -137,7 +142,7 @@ See [`../deploy-setup.sh`](../deploy-setup.sh) for a full automated script.
 
 ## 🎪 Perfect for Hackathons
 
-1. **"Live BTC price from Binance API"** *(show real data)*
+1. **"Live BTC price from DexScreener API"** *(show real data)*
 2. **"Stored on Stellar testnet"** *(show contract)*  
 3. **"Updates every 30 seconds"** *(watch animation)*
 4. **"I can submit custom data"** *(live interaction)*
@@ -147,4 +152,5 @@ Built with ❤️ for the Stellar ecosystem
 
 ## 🚀 Simple Commands & Quick Reference
 
+See [`SIMPLE_COMMANDS.md`](./SIMPLE_COMMANDS.md) for a full list of one-liners, troubleshooting, and hackathon demo tips.
 See [`SIMPLE_COMMANDS.md`](./SIMPLE_COMMANDS.md) for a full list of one-liners, troubleshooting, and hackathon demo tips.

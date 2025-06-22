@@ -13,29 +13,39 @@
 📊 Health: http://localhost:3001/health
 💰 Prices: http://localhost:3001/prices
 📈 Status: http://localhost:3001/status
-💰 BTC: $102453.730000 via token_address (orca)
-💰 ETH: $2280.680000 via token_address (orca)
-💰 SOL: $135.760000 via token_address (raydium)
+💰 BTC: $102606.120000 via token_address (orca)
+💰 ETH: $2286.280000 via token_address (orca)
+💰 SOL: $136.052000 via token_address (raydium)
 💰 XLM: $1.001200 via token_address (uniswap)
-🔄 Submitting BTC: $102453.73 via simple payment...
-📡 Testing transaction system with BTC...
+🔄 Submitting BTC: $102606.12 via simple payment...
 📡 GET /health from ::1
+📡 Testing transaction system with BTC...
 ✅ SYSTEM WORKS BTC: Transaction successful!
 📋 Next step: Fix contract call once system proven working
-🔄 Submitting ETH: $2280.68 via simple payment...
+🔄 Submitting ETH: $2286.28 via simple payment...
 📡 Testing transaction system with ETH...
 ❌ SYSTEM ERROR ETH: TRY_AGAIN_LATER
-🔄 Submitting SOL: $135.76 via simple payment...
+🔄 Submitting SOL: $136.05 via simple payment...
 📡 Testing transaction system with SOL...
-❌ SYSTEM ERROR SOL: ERROR
+❌ SYSTEM ERROR SOL: TRY_AGAIN_LATER
 🔄 Submitting XLM: $1.00 via simple payment...
 📡 Testing transaction system with XLM...
 ✅ SYSTEM WORKS XLM: Transaction successful!
 📋 Next step: Fix contract call once system proven working
-📊 Update #1 complete in 8294ms
+📊 Update #1 complete in 8940ms
 💰 Fetched 4 prices | ⛓️ Submitted 2 to Stellar
 🎉 Successfully updated 2 price(s) on Stellar blockchain!
 ✅ Oracle service ready (30s updates)
 🎯 Perfect for hackathon demos!
+📡 GET /prices from ::ffff:127.0.0.1
+📡 GET /health from ::ffff:127.0.0.1
+📡 GET /prices from ::ffff:127.0.0.1
+📡 GET /stats from ::ffff:127.0.0.1
+📡 GET /stats from ::ffff:127.0.0.1
+📡 GET /history/BTC from ::ffff:127.0.0.1
+📡 GET /history/ETH from ::ffff:127.0.0.1
+📡 GET /history/SOL from ::ffff:127.0.0.1
+📡 GET /history/XLM from ::ffff:127.0.0.1
+📡 GET /health from ::ffff:127.0.0.1
 
 👋 Stellar Oracle shutting down gracefully...

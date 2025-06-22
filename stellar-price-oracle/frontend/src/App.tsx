@@ -198,7 +198,7 @@ function App() {
           <PriceCard
             key={asset}
             asset={asset}
-            price={prices[asset]}
+            price={prices[asset]} // Use real prices
             loading={pricesLoading}
             error={pricesError ?? undefined}
             onClick={() => updateState({ selectedAsset: asset })}
@@ -332,6 +332,9 @@ function App() {
     </div>
   );
 
+  // Use the actual asset codes present in prices for analytics
+  const analyticsAssets = Object.keys(prices);
+
   const renderAnalytics = () => (
     <div className="space-y-8">
       <div className="text-center">
@@ -342,7 +345,7 @@ function App() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {supportedAssets.map((asset: string) => (
+        {analyticsAssets.map((asset: string) => (
           <div key={asset} className="bg-white/5 backdrop-blur-sm rounded-xl border border-purple-500/20 p-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-medium text-white">{asset} Analytics</h3>
