@@ -184,57 +184,9 @@
 
 ---
 
-## 👥 **THE TEAM**
-
-### **Technical Expertise**
-- **Blockchain Development**: 5+ years Stellar/Soroban
-- **DeFi Experience**: Built oracle systems for 10+ protocols  
-- **Full-Stack Development**: React, Node.js, Rust expertise
-- **Data Engineering**: Real-time systems at enterprise scale
-
-### **Domain Knowledge**
-- **Financial Markets**: Traditional & crypto trading experience
-- **Oracle Technology**: Deep understanding of price feed challenges
-- **Developer Ecosystem**: Active in Stellar and DeFi communities
-- **Product Strategy**: Experience scaling dev tools products
-
-### **Advisory Network**
-- **Stellar Development Foundation** technical advisors
-- **DeFi protocol founders** for market insights
-- **Institutional traders** for feature validation
 
 ---
 
-## 💸 **FUNDING ASK**
-
-# **$2.5M Seed Round**
-
-### **Use of Funds**
-
-**🧑‍💻 Team Expansion (40% - $1M)**
-- Senior Rust/Soroban developers
-- DevRel and developer marketing
-- Customer success team
-
-**🏗️ Product Development (35% - $875K)**
-- Mainnet deployment infrastructure
-- Advanced analytics platform
-- Enterprise security features
-
-**📈 Go-to-Market (20% - $500K)**
-- Developer conference presence
-- Content marketing program
-- Partnership development
-
-**💼 Operations (5% - $125K)**
-- Legal and compliance
-- Accounting and business ops
-- Office and tools
-
-### **Target Investors**
-- **Stellar-focused funds** (ecosystem alignment)
-- **DeFi infrastructure VCs** (market expertise)
-- **Developer tools investors** (product category)
 
 ---
 
@@ -289,12 +241,7 @@
 
 ---
 
-## 📱 **LIVE DEMO**
 
-### **See It In Action**
-🌐 **Frontend**: [instantoracle.stellar.dev](https://instantoracle.stellar.dev)  
-📊 **API**: [api.instantoracle.stellar.dev/prices](https://api.instantoracle.stellar.dev/prices)  
-📋 **GitHub**: [github.com/stellar/price-oracle](https://github.com/stellar/price-oracle)  
 
 ### **Real-Time Metrics**
 - **✅ Live prices** for BTC, ETH, SOL, XLM
